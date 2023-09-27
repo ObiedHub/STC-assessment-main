@@ -1,0 +1,11 @@
+type FileMetaData {
+    fileName: String
+    folderName: String
+    spaceName: String
+    itemType: String
+}
+
+type Query {
+    getFileMetaData(id: ID!): FileMetaData
+    
+}

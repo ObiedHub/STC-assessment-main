@@ -1,0 +1,5 @@
+select
+	users.user_id ,	users.user_name,trainingDetails.training_id,trainingDetails.training_date, count(1) AS 'Count'
+from users users
+join training_details trainingDetails on users.user_id = trainingDetails.user_id
+group by user_name,user_id, trainingDetails.training_id, trainingDetails.training_date having count(1) > 1 order by training_date desc;
